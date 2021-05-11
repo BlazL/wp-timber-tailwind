@@ -1,9 +1,9 @@
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
-  purge: [],
+  purge: [
+    './templates/**/*.twig',
+    './assets/dist/**/*.js',
+    './**/*.php'
+  ],
   theme: {
     extend: {},
   },
