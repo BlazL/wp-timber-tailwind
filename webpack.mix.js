@@ -1,11 +1,16 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
+const tailwindcss = require('tailwindcss');
+require('laravel-mix-purgecss');
 
 mix.js('assets/src/js/app.js', 'assets/dist/')
-.postCss('assets/src/css/app.css', 'assets/dist/', [
-    require('tailwindcss'),
-])
+.sass('assets/src/scss/app.scss', 'assets/dist/')
+.options({
+    processCssUrls: false,
+    postCss: [ tailwindcss('./tailwind.config.js') ],
+})
+
 .browserSync({
-    proxy: "junaidqadir.local",
+    proxy: "jed-wp.lndo.site",
     files: [
         "./assets/dist/*",
         "./assets/src/js/**/*.js",

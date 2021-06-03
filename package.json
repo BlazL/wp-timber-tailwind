@@ -16,11 +16,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^9",
     "browser-sync": "^2.26.12",
     "browser-sync-webpack-plugin": "^2.2.2",
+    "css-loader": "~3.0.0",
     "jquery": "^3.5.1",
     "laravel-mix": "^5.0.5",
-    "tailwind": "^4.0.0"
+    "postcss": "^7",
+    "postcss-loader": "~3.0.0",
+    "resolve-url-loader": "3.1.0",
+    "sass": "^1.32.12",
+    "sass-loader": "^10.1.1",
+    "tailwind": "^4.0.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
     "vue-template-compiler": "^2.6.12"
